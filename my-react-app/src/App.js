@@ -15,6 +15,10 @@ import {
 } from 'chart.js';
 import "./App.css";
 import { Bar } from 'react-chartjs-2';
+import Footer from './Footer';
+import HomeIcon from '@mui/icons-material/Home';
+import AboutIcon from '@mui/icons-material/Home';
+
 import { Pie } from 'react-chartjs-2';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, } from 'chart.js';
@@ -149,7 +153,7 @@ const pieData = {
   return (
     <div className= "App">
       <div className="nav-bar">
-         <a href="#" class="nav-item">Home</a>
+          <a href="#" class="nav-item">Home</a>
           <a href="#" class="nav-item">About</a>
           <a href="#" class="nav-item">Services</a>
           <a href="#" class="nav-item">Contact</a>
@@ -160,12 +164,12 @@ const pieData = {
 
             <div class="line"> <h3>Line Chart</h3>
               <Line data={data2} options={{ maintainAspectRatio: false }}/>
-              <span className='footer'><small>line representation</small></span>
+              <span className='footer1'><small>line representation</small></span>
              </div>
             <div class="bar">
               <h3>Bar Chart</h3>
               <Bar data={data} options={options}/>
-              <span className='footer'><small> bar representation of sales in respect to losses</small></span>
+              <span className='footer1'><small> bar representation of sales in respect to losses</small></span>
               </div>
             <div class="pie">
             <Pie data={pieData} />
@@ -173,6 +177,7 @@ const pieData = {
             </div>
 
       </div>
+
       <div className='table'>
         <table className='style-table'>
                   <thead>
@@ -197,11 +202,13 @@ const pieData = {
                   </tbody>
               </table>
       </div>
-      <div className='extras'>
-        <span></span>
+      <div className='ff'>
+      <Footer />
       </div>
-    </div>
+
+  </div>
   );
+
 };
 
 export default App;
